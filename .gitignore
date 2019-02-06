@@ -10,7 +10,7 @@ application/logs/*
 
 composer.lock
 
-user_guide/
+
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
@@ -32,3 +32,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/results/
 
 # archivos de codigniter
+user_guide/
+
+# archivos de configuración
+application/config/database.php

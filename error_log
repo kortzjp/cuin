@@ -1,0 +1,9 @@
+[01-Feb-2019 20:28:33 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/cuisaacn/public_html/application/views/template/UrlGlobal.php on line 11
+[01-Feb-2019 20:30:30 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/cuisaacn/public_html/application/views/template/UrlGlobal.php on line 11
+[01-Feb-2019 20:32:27 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/cuisaacn/public_html/application/views/template/UrlGlobal.php on line 11
+[01-Feb-2019 20:38:01 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/cuisaacn/public_html/application/views/template/UrlGlobal.php on line 11
+[02-Feb-2019 16:01:43 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cuisaacn/public_html/application/controllers/BackEnd/Login.php on line 17
+[02-Feb-2019 18:25:39 UTC] PHP Fatal error:  Call to undefined method Login_model::ModelLoginAccesoUsuario() in /home/cuisaacn/public_html/application/controllers/BackEnd/Login.php on line 44
+[02-Feb-2019 18:27:57 UTC] PHP Fatal error:  Call to undefined method Login_model::ModelLoginAccesoUsuario() in /home/cuisaacn/public_html/application/controllers/BackEnd/Login.php on line 44
+[02-Feb-2019 18:32:35 UTC] PHP Fatal error:  Call to undefined method Login_model::ModelLoginAccesoUsuario() in /home/cuisaacn/public_html/application/controllers/BackEnd/Login.php on line 44
+[02-Feb-2019 18:32:56 UTC] PHP Fatal error:  Call to undefined method Login_model::ModelLoginAccesoUsuario() in /home/cuisaacn/public_html/application/controllers/BackEnd/Login.php on line 44
