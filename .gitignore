@@ -36,3 +36,4 @@ user_guide/
 
 # archivos de configuración
 application/config/database.php
+application/config/config.php
