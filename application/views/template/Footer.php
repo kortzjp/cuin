@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<footer id="rs-footer" class="bg3 rs-footer">
+<footer id="rs-footer" class="bg5 rs-footer">
     <div class="container">
         <!-- Footer Address -->
         <div>
