@@ -57,17 +57,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Services End -->
 
         <!-- About Us Start -->
-        <?php // $this->load->view('template/ServicesGlobal'); ?> 
+        <?php $this->load->view('template/AboutGlobal'); ?> 
         <!-- About Us End -->
-
+        
         <!-- Courses Start -->
-         <?php  $this->load->view('template/CursesGlobal'); ?> 
+         <?php  // $this->load->view('template/CursesGlobal'); ?> 
         <!-- Courses End -->
 
         <!-- Counter Up Section Start-->
-        <?php // $this->load->view('template/CounterSection'); ?> 
+        <?php  $this->load->view('template/CounterUpSection'); ?> 
         <!-- Counter Down Section End -->
-
+        
+        <!-- Gallery Start -->
+        <?php $this->load->view('template/GalleryGlobal'); ?> 
+        <!-- Gallery End -->
+        
         <!-- Events Start -->
         <?php // $this->load->view('template/EventsSection'); ?> 
         <!-- Events End -->
@@ -118,11 +122,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         -->
 
         <!-- Testimonial Start -->
-        <?php // $this->load->view('Testimonial/TeamSection'); ?> 
+        <?php  $this->load->view('template/Testimonial'); ?> 
         <!-- Testimonial End -->
 
         <!-- Partner Start -->
-        <?php // $this->load->view('Partner/TeamSection'); ?> 
+        <?php $this->load->view('template/Partner'); ?> 
         <!-- Partner End -->
 
         <!-- Footer Start -->

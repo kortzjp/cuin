@@ -7,8 +7,8 @@
                         <i class="glyph-icon flaticon-email"></i>
                         <div class="info-text">
                             <a href="mailto:info@domain.com">
-                                <span>Mail Us</span>
-                                info@domain.com
+                                <span>Contactanos</span>
+                                informes@cuisaacn.com
                             </a>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                         <i class="glyph-icon flaticon-phone-call"></i>
                         <div class="info-text">
                             <a href="tel:4155551234">
-                                <span>Call Us</span>
+                                <span>LLamanos</span>
                                 +1234-567-890
                             </a>
                         </div>

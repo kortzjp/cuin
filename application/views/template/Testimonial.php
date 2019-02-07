@@ -1,4 +1,4 @@
-<div id="rs-testimonial" class="rs-testimonial bg5 sec-spacer">
+<div id="rs-testimonial" class="rs-testimonial bg3 sec-spacer">
             <div class="container">
                 <div class="sec-title mb-50 text-center">
                     <h2 class="white-color">WHAT PEOPLE SAYS</h2>

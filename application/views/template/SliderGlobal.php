@@ -6,10 +6,10 @@
             <div class="display-table">
                 <div class="display-table-cell">
                     <div class="container text-center">
-                        <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">WELCOME TO EDULEARNq</h1>
-                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>
-                        <a href="#" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn" data-animation-out="animate-out">READ MORE</a>
-                        <a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">GET STARTED NOW</a>
+                        <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">BIENVENIDO Al CENTRO UNIVERSITARIO ISAAC NEWTON</h1>
+                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc"> <!-- frace --> <br class="hidden-sm-dow"> <!-- frace --> </p>
+                        <!-- <a href="#" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn" data-animation-out="animate-out">READ MORE</a>
+                        <a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">GET STARTED NOW</a> -->
                     </div>
                 </div>
             </div>
@@ -23,10 +23,10 @@
             <div class="display-table">
                 <div class="display-table-cell">
                     <div class="container text-center">
-                        <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">ARE YOU READY TO APPLY?</h1>
-                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>
-                        <a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
-                        <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a>
+                        <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">Únete a nosotros</h1>
+                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc"> No esperes más…<br class="hidden-sm-dow"> tenemos el curso especial para ti.</p>
+                        <!-- <a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
+                        <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a> -->
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
             <div class="display-table">
                 <div class="display-table-cell">
                     <div class="container text-center">
-                        <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">ARE YOU READY TO APPLY?</h1>
-                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>
-                        <a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
-                        <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a>
+                        <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">LA SUERTE FAVORESE SOLÓ A LA MENTE PREPARADA</h1>
+                        <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc"> <!-- frace --><br> <!-- frace --></p>
+                        <!-- <a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
+                        <a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a> -->
                     </div>
                 </div>
             </div>

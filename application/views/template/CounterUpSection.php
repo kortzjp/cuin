@@ -1,5 +1,5 @@
 <!-- Counter Up Section Start-->
-<div class="rs-counter pt-100 pb-70 bg3">
+<div class="rs-counter pt-100 pb-70 bg6">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
