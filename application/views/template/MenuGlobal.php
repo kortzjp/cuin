@@ -77,7 +77,7 @@
                            Drop Down Pages End -->
 
                             <!--Courses Menu Start-->
-                            <li class="menu-item-has-children"> <a href="<?= base_url()?>#rs-courses">Cursos</a>
+                            <li class="menu-item-has-children"> <a href="<?= base_url()?>courses">Cursos</a>
                                 <ul class="sub-menu">
                                     <li><a href="<?= base_url('cursos/uno')?>">Courses One</a></li>
                                     <li><a href="<?= base_url('cursos/dos')?>">Courses Two</a></li>

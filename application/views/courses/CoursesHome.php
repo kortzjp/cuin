@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 <!--UrlGlobal area start here-->
 <?php $this->load->view('template/UrlGlobal'); ?>
 <!--UrlGlobal area end here-->
