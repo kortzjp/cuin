@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Header Top End -->
 
                 <!-- Menu Start -->
-                <?php $this->load->view('template/MenuGlobal'); ?>
+                <?php $this->load->view('template/MenuGlobal',$carreras); ?>
                 <!-- Menu End -->
             </header>
             <!--Header End-->
