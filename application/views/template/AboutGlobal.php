@@ -7,11 +7,14 @@
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <div class="about-img rs-animation-hover">
+                <!-- <div class="about-img rs-animation-hover">
                     <img src="<?= base_url() ?>public/images/about/about.jpg" alt="img02"/>
                     <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon">
                     </a>
                     <div class="overly-border"></div>
+                </div> -->
+                <div class="counter-img rs-image-effect-shine">
+                    <img src="<?= base_url() ?>public/images/about/about4.png" alt="Nosotros CUIN">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
