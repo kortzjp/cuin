@@ -79,10 +79,22 @@
                             <!--Courses Menu Start-->
                             <li class="menu-item-has-children"> <a href="<?= base_url()?>courses">Cursos</a>
                                 <ul class="sub-menu">
-                                    <li><a href="<?= base_url('cursos/uno')?>">Courses One</a></li>
-                                    <li><a href="<?= base_url('cursos/dos')?>">Courses Two</a></li>
-                                    <li><a href="<?= base_url('cursos/tres')?>">Courses Three</a></li>
-                                    <!-- <li><a href="courses-details2.html">Courses Details 2</a></li> -->
+                                    <?php
+                                    foreach ($carreras as $categoria){?>
+                                    <li><a href="#"><?php echo($categoria -> nombre); ?></a>
+                                        <ul class="sub-menu">
+                                            <?php foreach ($carreras as $id)
+                                            {
+
+                                                if($id -> PkCategoria == $categoria -> FkCategoria)
+                                                {
+                                                ?>
+                                            <li> <a href="<?php echo base_url("Courses/detalle/$categoria->PKCarrera"); ?>"><?php echo($categoria-> curso); ?></a> </li>
+                                          <?php }
+                                            } ?>
+                                        </ul>
+                                    </li>
+                                    <?php } ?>
                                 </ul>
                             </li>
                             <!--Courses Menu End-->
