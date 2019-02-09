@@ -1,5 +1,5 @@
 <!-- Gallery Start -->
-<div class="rs-gallery-4 rs-gallery sec-spacer">
+<div id="rs-galeria" class="rs-gallery-4 rs-gallery sec-spacer">
     <div class="container">
         <div class="sec-title-2 mb-50 text-center">
             <h2>GALLERY (4 COLUMNS)</h2>      
