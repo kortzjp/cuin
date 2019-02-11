@@ -34,7 +34,7 @@ class Login extends CI_Controller
         {
             if($this->session->userdata('idNivel') == '1' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-				echo "Listo";exit;
+				echo "Listo desde git hub";exit;
                 //redirect(base_url().'admin/ListarAspirante/Listar');
             }
             elseif($this->session->userdata('idNivel') == '2' and $this->session->userdata('bloqueoUsuario') == 0)
