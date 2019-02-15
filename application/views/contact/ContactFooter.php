@@ -88,7 +88,7 @@
                         <li ><a href="<?= base_url()?>#rs-about"><i class="fa fa-angle-right" aria-hidden="true"></i>Nosotros</a></li>
                         <li><a href="<?= base_url()?>#rs-courses"><i class="fa fa-angle-right" aria-hidden="true"></i>Cursos</a></li>
                         <li><a href="<?= base_url() ?>"><i class="fa fa-angle-right" aria-hidden="true"></i>Galeria</a></li>
-                        <li><a href="<?= base_url() ?>contact"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
+                        <li><a href="<?= base_url() ?>contacto"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
                         <!--
                         <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>
                         <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
@@ -165,6 +165,9 @@
         <script src="<?= base_url() ?>public/js/rsmenu-main.js"></script>
         <!-- plugins js -->
         <script src="<?= base_url() ?>public/js/plugins.js"></script>
+        <!-- google map js -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgC6ZapXdUzFdeQOFhdm_wucwlDMMQ8CQ"></script>
+        
         <!-- main js -->
         <script src="<?= base_url() ?>public/js/main.js"></script>
     </body>

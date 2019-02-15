@@ -29,7 +29,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                             <!-- End Home -->
 
                             <!--About Menu Start-->
-                            <li class="menu-item-has-children"> <a href="#">Nosotros</a>
+                            <li class="menu-item-has-children"> <a href="<?= base_url()?>#rs-about">Nosotros</a>
                                 <!--
                                 <ul class="sub-menu">
                                     <li> <a href="about.html">About One</a></li>
@@ -151,7 +151,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                             End Icons -->
 
                             <!--blog Menu Start -->
-                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#galeria">Galeria</a>
+                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-galeria">Galeria</a>
                                 <!--
                                 <ul class="sub-menu">
                                     <li><a href="blog.html">Blog</a></li>
@@ -161,7 +161,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                             <!-- blog Menu End-->
 
                             <!--Contact Menu Start-->
-                            <li> <a href="contact.html">Contacto</a></li>
+                            <li> <a href="<?= base_url() ?>contact">Contacto</a></li>
                             <!--Contact Menu End-->
                         </ul>
                     </nav>
