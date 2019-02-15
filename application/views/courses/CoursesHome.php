@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Header Top End -->
 
         <!-- Menu Start -->
-        <?php $this->load->view('template/MenuGlobal',$carreras); ?>
+        <?php $this->load->view('template/MenuGlobal'); ?>
         <!-- Menu End -->
     </header>
     <!--Header End-->
@@ -48,12 +48,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="page-title">OUR COURSES</h1>
+                    <h1 class="page-title">NUESTRAS CARRERAS</h1>
                     <ul>
                         <li>
-                            <a class="active" href="index.html">Home</a>
+                            <a class="active" href="index.html">Inicio</a>
                         </li>
-                        <li>Our Courses</li>
+                        <li>Nuestras carreras</li>
                     </ul>
                 </div>
             </div>
@@ -66,36 +66,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="rs-courses-3" class="rs-courses-3 sec-spacer">
     <div class="container">
         <div class="abt-title">
-            <h2>OUR COURSES</h2>
+            <h2>NUESTRAS CARRERAS</h2>
         </div>
         <div class="gridFilter">
-            <button class="active" data-filter="*">ALL</button>
-            <?php foreach ($carreras as $carrera){?>
-            <button data-filter=".<?php echo $carrera->nombre;?>"> <?php echo $carrera->nombre;?></button>
+            <button class="active" data-filter="*">TODAS</button>
+            <?php foreach ($categorias as $categoria){?>
+            <button data-filter=".<?php echo $categoria->PkCategoria;?>"> <?php echo $categoria->categoria;?></button>
             <?php }?>
 
         </div>
         <div class="row grid cursos">
             <?php foreach ($carreras as $curso){?>
 
-                <div class="col-lg-4 col-md-6 grid-item <?php echo $curso->nombre;?>">
+                <div class="col-lg-4 col-md-6 grid-item <?php echo $curso->FkCategoria;?>">
                     <div class="course-item">
                         <div class="course-img">
                             <img src="<?php echo base_url("public/images/courses/$curso->imagen");?>" alt="" />
                             <span class="course-value">$<?php echo $curso->colegiatura;?></span>
                             <div class="course-toolbar">
-                                <h4 class="course-category"><a href="#"><?php echo $curso->nombre;?></a></h4>
+                                <h4 class="course-category"><a><?php echo $curso->categoria;?></a></h4>
                                 <div class="course-date">
                                     <i class="fa fa-calendar"></i> <?php echo $curso->apertura;?>
                                 </div>
                                 <div class="course-duration">
-                                    <i class="fa fa-clock-o"></i><?php echo $curso->duracion;?> años
+                                    <i class="fa fa-clock-o"></i><?php echo $curso->duracion;?>
                                 </div>
                             </div>
                         </div>
                         <div class="course-body">
                             <div class="course-desc">
-                                <h4 class="course-title"><a href="<?php echo base_url("Courses/detalle/$curso->PKCarrera"); ?>"><?php echo $curso->curso;?></a></h4>
+                                <h4 class="course-title"><a><?php echo $curso->carrera;?></a></h4>
                                 <p>
                                     <?php echo $curso->presentacion;?>
                                 </p>
@@ -103,27 +103,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="course-footer">
                             <div class="course-seats">
-                                <i class="fa fa-users"></i> 70 SEATS
+                                <i class="fa fa-users"></i> LUGARES ILIMITADOS
                             </div>
-                            <div class="course-button">
-                                <a href="#">APPLY NOW</a>
+                            <div class="apply-btn">
+                                <a href="<?php echo base_url("Courses/detalle/$curso->clave"); ?>">VER DETALLES</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <?php } ?>
         </div>
+
+
+
+
+
+        <!--
+
+
+
+
+
+
         <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
-                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
-            </ul>
-        </nav>
+             <ul class="pagination">
+                 <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
+                 <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                 <li class="page-item"><a class="page-link" href="#">2</a></li>
+                 <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
+                 <li class="page-item"><a class="page-link" href="#">5</a></li>
+                 <li class="page-item"><a class="page-link" href="#">6</a></li>
+                 <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
+             </ul>
+         </nav>-->
     </div>
 </div>
 <!-- Courses End -->

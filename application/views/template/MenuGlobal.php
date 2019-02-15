@@ -1,3 +1,10 @@
+<?php
+$model = &get_instance();
+$model->load->model("Course_model");
+
+$cursos = $model->Course_model->menuGlobalCursos();
+$categorias = $model->Course_model->menuGlobalCategoria();
+?>
 <div class="menu-area menu-sticky">
     <div class="container">
         <div class="main-menu">
@@ -80,16 +87,16 @@
                             <li class="menu-item-has-children"> <a href="<?= base_url()?>courses">Cursos</a>
                                 <ul class="sub-menu">
                                     <?php
-                                    foreach ($carreras as $categoria){?>
-                                    <li><a href="#"><?php echo($categoria -> nombre); ?></a>
+                                    foreach ($categorias as $categoria){?>
+                                    <li><a href="#"><?php echo($categoria -> categoria); ?></a>
                                         <ul class="sub-menu">
-                                            <?php foreach ($carreras as $id)
+                                            <?php foreach ($cursos as $curso)
                                             {
 
-                                                if($id -> PkCategoria == $categoria -> FkCategoria)
+                                                if($curso -> FkCategoria == $categoria -> PkCategoria)
                                                 {
                                                 ?>
-                                            <li> <a href="<?php echo base_url("Courses/detalle/$categoria->PKCarrera"); ?>"><?php echo($categoria-> curso); ?></a> </li>
+                                            <li> <a href="<?php echo base_url("Courses/detalle/$curso->clave"); ?>"><?php echo($curso-> carrera); ?></a> </li>
                                           <?php }
                                             } ?>
                                         </ul>
@@ -217,13 +224,10 @@
                 Pages Menu End-->
 
                 <!--Courses Menu Star-->
-                <li class="menu-item-has-children"><a href="<?= base_url() ?>#rs-courses">Cursos</a>
-                    <ul class="list-unstyled">
-                        <li class="sub-nav"><a href="<?= base_url('cursos/uno')?>">Courses<span class="icon"></span></a></li>
-                        <li class="sub-nav"><a href="<?= base_url('cursos/dos')?>">Courses Two<span class="icon"></span></a></li>
-                        <li class="sub-nav"><a href="<?= base_url('cursos/tres')?>">Courses Details<span class="icon"></span></a></li>
-                    </ul>
-                </li>
+                <li class="list-unstyled"><a href="<?= base_url() ?>courses">Carreras</a></li>
+
+
+
                 <!--Courses Menu End-->
 
                 <!--Events Menu Star
