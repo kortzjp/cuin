@@ -154,7 +154,7 @@
                             <!-- blog Menu End-->
 
                             <!--Contact Menu Start-->
-                            <li> <a href="contact.html">Contacto</a></li>
+                            <li> <a href="<?= base_url() ?>contact">Contacto</a></li>
                             <!--Contact Menu End-->
                         </ul>
                     </nav>
