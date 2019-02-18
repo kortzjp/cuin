@@ -70,9 +70,10 @@ $imagen = $curso[0]->imagen;
             <div class="col-lg-8 col-md-12">
                 <div class="detail-img">
                     <img src="<?php echo base_url("public/images/courses/$imagen");?>" alt="Courses Images" />
-                    <div class="course-seats">
+                 <!--   <div class="course-seats">
                         170 <span>SEATS</span>
                     </div>
+                    -->
                 </div>
                 <div class="course-content">
                     <!--<h3 class="course-title">Computer Science And Engineering</h3>-->
@@ -110,7 +111,7 @@ $imagen = $curso[0]->imagen;
                                                 <span>Precio :</span> $<?=$curso[0] -> colegiatura; ?>
                                             </li>
                                             <li>
-                                                <span>Duracion :</span> <?=$curso[0] -> duracion; ?> años
+                                                <span>Duracion :</span> <?=$curso[0] -> duracion; ?>
                                             </li>
                                             <li>
                                                 <span>Categoria :</span> <?=$curso[0] -> carrera; ?>
