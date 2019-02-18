@@ -7,7 +7,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!--UrlGlobal area start here-->
     <?php $this->load->view('template/UrlGlobal'); ?>
     <!--UrlGlobal area end here-->
-
+    <style>
+        .google-maps {
+            position: relative;
+            padding-bottom: 50%; // This is the aspect ratio
+            height: 0;
+            overflow: hidden;
+        }
+        .google-maps iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            
+        }
+    </style>
     <body class="home1">
         <!--Preloader area start here-->
         <div class="book_preload">
@@ -34,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Header Top End -->
 
                 <!-- Menu Start -->
-                <?php $this->load->view('template/MenuGlobal', $carreras); ?>
+                <?php $this->load->view('template/MenuGlobal'); ?>
                 <!-- Menu End -->
             </header>
             <!--Header End-->
@@ -48,12 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="page-title">Contact</h1>
+                            <h1 class="page-title">Contacto</h1>
                             <ul>
                                 <li>
-                                    <a class="active" href="index.html">Home</a>
+                                    <a class="active" href="<?= base_url() ?>">Inicio</a>
                                 </li>
-                                <li>Cantact</li>
+                                <li>Contacto</li>
                             </ul>
                         </div>
                     </div>
@@ -65,37 +79,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Contact Section Start -->
         <div class="contact-page-section sec-spacer">
             <div class="container">
-                <div id="googleMap"></div>
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d331.80926685196397!2d-99.87411811378074!3d19.79788047334534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d258ea55555555%3A0x698f4df4f6ba368e!2sCentro+Universitario+Isaac+Newton!5e0!3m2!1ses!2smx!4v1550449692667" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
                 <div class="row contact-address-section">
                     <div class="col-md-4 pl-0">
                         <div class="contact-info contact-address">
                             <i class="fa fa-map-marker"></i>
-                            <h4>Address</h4>
-                            <p>503  Old Buffalo Street</p>
-                            <p>Northwest #205, New York-3087</p>
+                            <h4>Dirección</h4>
+                            <p>Calle Nicolas Bravo Esq. Callejon Juan Aldama</p>
+                            <p>Frente a Coopel Centro, Atlacomulco, México.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="contact-info contact-phone">
                             <i class="fa fa-phone"></i>
-                            <h4>Phone Number</h4>
-                            <a href="tel:+3453-909-6565">+3453-909-6565</a>
-                            <a href="tel:+2390-875-2235">+2390-875-2235</a>
+                            <h4>Número Telefónico</h4>
+                            <a href="tel:01 712 120 4030">01 712 120 4030</a>
+                            <br>
                         </div>
                     </div>
                     <div class="col-md-4 pr-0">
                         <div class="contact-info contact-email">
                             <i class="fa fa-envelope"></i>
-                            <h4>Email Address</h4>
-                            <a href="mailto:infoname@gmail.com"><p>infoname@gmail.com</p></a>
-                            <a href="#"><p>www.yourname.com</p></a>
+                            <h4>Correo electrónico</h4>
+                            <a href="mailto:informes@cuisaacnewton.com"><p>informes@cuisaacnewton.com</p></a>
+                            <!-- <a href="#"><p>www.yourname.com</p></a> -->
+                            <br>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-comment-section">
                     <h3>Deje un comentario</h3>
-                    <div id="form-messages"></div>
+                    <div id="form-messages">
+                        <?php
+                        if ($this->session->flashdata('envio')) {
+                            echo '<p class="alert alert-success">' . $this->session->flashdata('envio') . '</p>';
+                        }
+                        if ($this->session->flashdata('error')) {
+                            echo '<p class="alert alert-danger">' . $this->session->flashdata('error') . '</p>';
+                        }
+                        ?></div>
                     <form id="contact-form" method="post" action="contact/send">
                         <fieldset>
                             <div class="row">                                      

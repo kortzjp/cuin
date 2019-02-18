@@ -6,11 +6,11 @@
             <div class="row footer-contact-desc">
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-envelope"></i>
                         <h4 class="contact-title">Dirección</h4>
                         <p class="contact-desc">
-                            503  Old Buffalo Street<br>
-                            Northwest #205, New York-3087
+                            Calle Nicolas Bravo Esq. Callejon Juan Aldama<br>
+                            Frente a Coopel Centro, Atlacomulco, México.
                         </p>
                     </div>
                 </div>
@@ -19,18 +19,18 @@
                         <i class="fa fa-phone"></i>
                         <h4 class="contact-title">Número Telefónico</h4>
                         <p class="contact-desc">
-                            +3453-909-6565<br>
-                            +2390-875-2235
+                            01 712 120 4030<br>
+                            
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="contact-inner">
-                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-envelope"></i>
                         <h4 class="contact-title">Correo electrónico</h4>
                         <p class="contact-desc">
-                            infoname@gmail.com<br>
-                            www.yourname.com
+                            informes@cuisaacnewton.com<br>
+                             
                         </p>
                     </div>
                 </div>

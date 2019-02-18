@@ -6,7 +6,7 @@
                     <div id="info-details" class="widget-text">
                         <i class="glyph-icon flaticon-email"></i>
                         <div class="info-text">
-                            <a href="mailto:info@domain.com">
+                            <a href="mailto:informes@cuisaacn.com">
                                 <span>Contactanos</span>
                                 informes@cuisaacn.com
                             </a>
@@ -24,9 +24,9 @@
                     <div id="phone-details" class="widget-text">
                         <i class="glyph-icon flaticon-phone-call"></i>
                         <div class="info-text">
-                            <a href="tel:4155551234">
+                            <a href="tel:017121204030">
                                 <span>LLamanos</span>
-                                +1234-567-890
+                                01 712 120 4030
                             </a>
                         </div>
                     </div>
