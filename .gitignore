@@ -37,3 +37,6 @@ user_guide/
 # archivos de configuración
 application/config/database.php
 application/config/config.php
+
+#ingnorar acrchivos de admilte CPanel
+public/CPanel

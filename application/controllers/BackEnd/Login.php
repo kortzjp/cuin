@@ -32,46 +32,48 @@ class Login extends CI_Controller
         }
         else if($this->LoginCheckUser() == true)
         {
-            if($this->session->userdata('idNivel') == '1' and $this->session->userdata('bloqueoUsuario') == 0)
+			if($this->session->userdata('idNivel') == '0' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-				echo "Listo desde git hub";exit;
-                //redirect(base_url().'admin/ListarAspirante/Listar');
+                redirect(base_url().'BackEnd/Invitado/home');
+            }
+            elseif($this->session->userdata('idNivel') == '1' and $this->session->userdata('bloqueoUsuario') == 0)
+            {
+				redirect(base_url().'BackEnd/SuperUsuario/home');
             }
             elseif($this->session->userdata('idNivel') == '2' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-                $idUsuario = $this->session->userdata('idUsuario');
-                $idNivel   = $this->session->userdata('idNivel');
-                $this->Login_model->ModelSessionUser($idUsuario, $idNivel);
+                //$idUsuario = $this->session->userdata('idUsuario');
+                //$idNivel   = $this->session->userdata('idNivel');
+                //$this->Login_model->ModelSessionUser($idUsuario, $idNivel);
 
-                redirect(base_url().'admin/User/Perfil');
+                redirect(base_url().'BackEnd/Rectoria/home');
 
             }
-	    elseif($this->session->userdata('idNivel') == '3' and $this->session->userdata('bloqueoUsuario') == 0)
+			elseif($this->session->userdata('idNivel') == '3' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-                $idUsuario = $this->session->userdata('idUsuario');
-                $idNivel   = $this->session->userdata('idNivel');
-                $this->Login_model->ModelSessionUser($idUsuario, $idNivel);
+                //$idUsuario = $this->session->userdata('idUsuario');
+                //$idNivel   = $this->session->userdata('idNivel');
+                //$this->Login_model->ModelSessionUser($idUsuario, $idNivel);
 
-                redirect(base_url().'admin/Docente/Perfil');
+                redirect(base_url().'BackEnd/Servicio/home');
 
             }
             elseif($this->session->userdata('idNivel') == '4' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-                $idUsuario = $this->session->userdata('idUsuario');
-                $idNivel   = $this->session->userdata('idNivel');
-                $this->Login_model->ModelSessionUser($idUsuario, $idNivel);
+                //$idUsuario = $this->session->userdata('idUsuario');
+                //$idNivel   = $this->session->userdata('idNivel');
+                //$this->Login_model->ModelSessionUser($idUsuario, $idNivel);
 
-                redirect(base_url().'admin/Alumno/Perfil');
+                redirect(base_url().'BackEnd/Profesor/home');
 
             }
-			 elseif($this->session->userdata('idNivel') == '7' and $this->session->userdata('bloqueoUsuario') == 0)
+			elseif($this->session->userdata('idNivel') == '5' and $this->session->userdata('bloqueoUsuario') == 0)
             {
-                $idUsuario = $this->session->userdata('idUsuario');
-                $idNivel   = $this->session->userdata('idNivel');
-                $this->Login_model->ModelSessionUser($idUsuario, $idNivel);
-echo "ADMINISTRADOR";
-exit;
-               // redirect(base_url().'cuin/courses/Courses/HomeCourses');
+                //$idUsuario = $this->session->userdata('idUsuario');
+                //$idNivel   = $this->session->userdata('idNivel');
+                //$this->Login_model->ModelSessionUser($idUsuario, $idNivel);
+
+                redirect(base_url().'BackEnd/Alumno/home');
 
             }
             else
