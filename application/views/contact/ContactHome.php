@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
     </style>
-    <body class="home1">
+    <body class="inner-page">
         <!--Preloader area start here-->
         <div class="book_preload">
             <div class="book">
@@ -40,16 +40,62 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php $this->load->view('template/ToolbarGlobal'); ?>
             <!-- Toolbar End -->
 
+
             <!--Header Start-->
-            <header id="rs-header" class="rs-header">
+            <header id="rs-header-2" class="rs-header-2">
+                <div class="menu-area menu-sticky">
+                    <div class="container">
 
-                <!-- Header Top Start -->
-                <?php $this->load->view('template/HeaderTopGlobal'); ?>
-                <!-- Header Top End -->
+                        <div class="row rs-vertical-middle">
+                            <div class="col-lg-3 col-md-12">
+                                <div class="logo-area">
+                                    <a href="index.html"><img src="<?= base_url()?>public/images/logo-white.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-12">
+                                <div class="main-menu">
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <!-- Home -->
+                                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>" class="home">Inicio</a>
+                            
+                                            </li>
+                                            <!-- End Home -->
 
-                <!-- Menu Start -->
-                <?php $this->load->view('template/MenuGlobal'); ?>
-                <!-- Menu End -->
+                                            <!--About Menu Start-->
+                                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-about">Nosotros</a>
+                            
+                                            </li>
+                                            <!--About Menu End-->
+
+                                            <!--Courses Menu Start-->
+                                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>courses">Cursos</a>
+                                                
+                                            </li>
+                                            <!--Courses Menu End-->
+
+                                            <!--blog Menu Start -->
+                                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-galeria">Galeria</a>
+
+                                            </li>
+                                            <!-- blog Menu End-->
+
+                                            <!--Contact Menu Start-->
+                                            <li class="current-menu-item current_page_item "> <a href="<?= base_url() ?>contact">Contacto</a></li>
+                                            <!--Contact Menu End-->
+                                        </ul>
+                                    </nav>
+                                    <div class="right-bar-icon rs-offcanvas-link text-right">
+                                        <!--
+                                            <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i class="fa fa-search"></i></a>
+                                        <a id="nav-expander" class="nav-expander fixed"><i class="fa fa-bars fa-lg white"></i></a>
+                                        -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </header>
             <!--Header End-->
 

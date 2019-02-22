@@ -19,7 +19,7 @@
                              -->
                         </ul>
                     </div>
-                    <a href="<?= base_url('BackEnd/Login/index')?>" class="apply-btn">Iniciar session</a>
+                    <a href="<?= base_url('BackEnd/Login/index')?>" class="apply-btn text-white">Iniciar session</a>
                 </div>
             </div>
         </div>
