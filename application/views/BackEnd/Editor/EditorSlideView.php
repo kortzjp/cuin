@@ -311,19 +311,20 @@
                             <div id="imgSlide" >
 
                                 <p><span class="fa fa-arrow-down"></span> 
-                                    Arrastra aquí­ tu imagen (tamaño recomendado: 1920px * 820px y peso recomendado: 2MB)
+                                    Arrastra aquí­ tu imagen (tamaño recomendado: 1600px * 600px y peso recomendado: 2MB)
                                 </p>
 
                                 <ul id="columnasSlide">
 
                                     <?php
-                                    foreach ($sliders as $slider) {
+                                    if ($sliders)
+                                        foreach ($sliders as $slider) {
 
-                                        echo '<li id="' . $slider->id . '" class="bloqueSlide">'
-                                        . '<span class="fa fa-times eliminarSlide" ruta="' . $slider->ruta . '"></span>'
-                                        . '<img src="' . base_url().$slider->ruta . '" class="handleImg">'
-                                        . '</li>';
-                                    }
+                                            echo '<li id="' . $slider->id . '" class="bloqueSlide">'
+                                            . '<span class="fa fa-times eliminarSlide" ruta="' . $slider->ruta . '"></span>'
+                                            . '<img src="' . base_url() . $slider->ruta . '" class="handleImg">'
+                                            . '</li>';
+                                        }
                                     ?>
 
                                 </ul>
@@ -343,8 +344,16 @@
                                 <ul id="ordenarTextSlide">
 
                                     <?php
-                                    /// $slide = new GestorSlide();
-                                    // $slide->editorSlideController();
+                                    if ($sliders)
+                                        foreach ($sliders as $slider) {
+
+                                            echo '<li id="item' . $slider->id . '">'
+                                            . '<span class="fa fa-pencil editarSlide" style="background:blue"></span>'
+                                            . '<img src="' . base_url() .  $slider->ruta . '" style="float:left; margin-bottom:10px" width="80%">'
+                                            . '<h1>' . $slider->titulo . '</h1>'
+                                            . '<p>' . $slider->descripcion . '</p>'
+                                            . '</li>';
+                                        }
                                     ?>
 
                                 </ul>
