@@ -17,7 +17,7 @@ class GestorSlideModel extends CI_Model {
 
     public function subirImagenSlideModel($datos) {
 
-        $data = array('ruta' => $datos);
+        $data = array('ruta' => $datos['ruta']);
 
         return $this->db->insert('slide', $data);
     }

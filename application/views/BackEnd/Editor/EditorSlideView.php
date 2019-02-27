@@ -317,7 +317,6 @@
                                 <ul id="columnasSlide">
 
                                     <?php
-                                    if($sliders)
                                     foreach ($sliders as $slider) {
 
                                         echo '<li id="' . $slider->id . '" class="bloqueSlide">'
