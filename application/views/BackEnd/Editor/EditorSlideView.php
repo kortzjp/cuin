@@ -284,7 +284,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Bienvenidos 
+                        Bienvenidos
                         <small></small>
                     </h1>
                     <ol class="breadcrumb">
@@ -305,18 +305,19 @@
                         <div class="box-body">
 
                             <!--=====================================
-                            SLIDE ADMINISTRABLE          
+                            SLIDE ADMINISTRABLE
                             ======================================-->
 
                             <div id="imgSlide" >
 
-                                <p><span class="fa fa-arrow-down"></span> 
+                                <p><span class="fa fa-arrow-down"></span>
                                     Arrastra aquí­ tu imagen (tamaño recomendado: 1920px * 820px y peso recomendado: 2MB)
                                 </p>
 
                                 <ul id="columnasSlide">
 
                                     <?php
+                                    if($sliders)
                                     foreach ($sliders as $slider) {
 
                                         echo '<li id="' . $slider->id . '" class="bloqueSlide">'

@@ -110,9 +110,7 @@ $imagen = $curso[0]->imagen;
                                             <li>
                                                 <span>Precio :</span> $<?=$curso[0] -> colegiatura; ?>
                                             </li>
-                                            <li>
-                                                <span>Duracion :</span> <?=$curso[0] -> duracion; ?>
-                                            </li>
+
                                             <li>
                                                 <span>Categoria :</span> <?=$curso[0] -> carrera; ?>
                                             </li>
@@ -121,10 +119,10 @@ $imagen = $curso[0]->imagen;
                                     <div class="col-md-6">
                                         <ul>
                                             <li>
-                                                <span>Inicio :</span> <?=$curso[0] -> apertura; ?>
+                                                <span>Duracion :</span> <?=$curso[0] -> duracion; ?>
                                             </li>
                                             <li>
-                                                <span>Fin :</span> 03-11-2017
+                                                <span>Inicio :</span> <?=$curso[0] -> apertura; ?>
                                             </li>
                                         </ul>
                                     </div>

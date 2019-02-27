@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/editor/css/sweetalert.css">
 <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/editor/css/cssFancybox/jquery.fancybox.css">
 
+
+
 <script src="<?= base_url('') ?>public/CPanel/editor/js/jquery-2.2.0.min.js"></script>
 <script src="<?= base_url('') ?>public/CPanel/editor/js/bootstrap.min.js"></script>
 <script src="<?= base_url('') ?>public/CPanel/editor/js/jquery.fancybox.js"></script>
