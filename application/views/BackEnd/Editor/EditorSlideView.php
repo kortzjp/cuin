@@ -317,6 +317,7 @@
                                 <ul id="columnasSlide">
 
                                     <?php
+                                    if ($sliders)
                                     foreach ($sliders as $slider) {
 
                                         echo '<li id="' . $slider->id . '" class="bloqueSlide">'
@@ -343,8 +344,16 @@
                                 <ul id="ordenarTextSlide">
 
                                     <?php
-                                    /// $slide = new GestorSlide();
-                                    // $slide->editorSlideController();
+                                    if ($sliders)
+                                        foreach ($sliders as $slider) {
+
+                                            echo '<li id="item' . $slider->id . '">'
+                                            . '<span class="fa fa-pencil editarSlide" style="background:blue"></span>'
+                                            . '<img src="' . base_url() .  $slider->ruta . '" style="float:left; margin-bottom:10px" width="80%">'
+                                            . '<h1>' . $slider->titulo . '</h1>'
+                                            . '<p>' . $slider->descripcion . '</p>'
+                                            . '</li>';
+                                        }
                                     ?>
 
                                 </ul>
