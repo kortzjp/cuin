@@ -21,7 +21,7 @@ class GestorSlideController extends CI_Controller {
         #-----------------------------------------------------------
         if (isset($_FILES["imagen"]["name"])) {
             list($ancho_img, $alto_img) = getimagesize($_FILES["imagen"]["tmp_name"]);
-            if ($ancho_img < 1600 || $alto_img < 600) {
+            if ($ancho_img < 1920 || $alto_img < 820) {
                 echo 0;
             } else {
 
@@ -53,8 +53,8 @@ class GestorSlideController extends CI_Controller {
                     $config['new_image'] = './public/images/slider/';
                     $config['maintain_ratio'] = TRUE;
                     $config['create_thumb'] = FALSE;
-                    $config['width'] = 1600;
-                    $config['height'] = 600;
+                    $config['width'] = 1920;
+                    $config['height'] = 820;
 
                     $CI->image_lib->initialize($config);
 

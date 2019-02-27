@@ -311,7 +311,7 @@
                             <div id="imgSlide" >
 
                                 <p><span class="fa fa-arrow-down"></span> 
-                                    Arrastra aquí­ tu imagen (tamaño recomendado: 1600px * 600px y peso recomendado: 2MB)
+                                    Arrastra aquí­ tu imagen (tamaño recomendado: 1920px * 820px y peso recomendado: 2MB)
                                 </p>
 
                                 <ul id="columnasSlide">
