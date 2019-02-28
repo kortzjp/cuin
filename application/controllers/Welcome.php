@@ -5,12 +5,13 @@ class Welcome extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("Editor/GestorSlideModel");
 
     }
 
     public function index()
     {
-
-        $this->load->view('HomeView');
+        $datos['sliders'] = $this->GestorSlideModel->todosSlideModel();
+        $this->load->view('HomeView',$datos);
     }
 }

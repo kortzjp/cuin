@@ -40,7 +40,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                         <div class="row rs-vertical-middle">
                             <div class="col-lg-3 col-md-12">
                                 <div class="logo-area">
-                                    <a href="index.html"><img src="<?= base_url()?>public/images/logo-white.png" alt="logo"></a>
+                                    <a href="index.html"><img src="<?= base_url() ?>public/images/logo-white.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-12">
@@ -49,19 +49,19 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                                         <ul class="nav-menu">
                                             <!-- Home -->
                                             <li class="menu-item-has-children"> <a href="<?= base_url() ?>" class="home">Inicio</a>
-                            
+
                                             </li>
                                             <!-- End Home -->
 
                                             <!--About Menu Start-->
                                             <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-about">Nosotros</a>
-                            
+
                                             </li>
                                             <!--About Menu End-->
 
                                             <!--Courses Menu Start-->
                                             <li class="current-menu-item current_page_item menu-item-has-children"> <a href="<?= base_url() ?>courses">Cursos</a>
-                                                
+
                                             </li>
                                             <!--Courses Menu End-->
 
@@ -123,11 +123,11 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                     <button class="active" data-filter="*">TODAS</button>
                     <?php foreach ($categorias as $categoria) { ?>
                         <button data-filter=".<?php echo $categoria->PkCategoria; ?>"> <?php echo $categoria->categoria; ?></button>
-<?php } ?>
+                    <?php } ?>
 
                 </div>
                 <div class="row grid cursos">
-<?php foreach ($carreras as $curso) { ?>
+                    <?php foreach ($carreras as $curso) { ?>
 
                         <div class="col-lg-4 col-md-6 grid-item <?php echo $curso->FkCategoria; ?>">
                             <div class="course-item">
@@ -148,7 +148,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                                     <div class="course-desc">
                                         <h4 class="course-title"><a><?php echo $curso->carrera; ?></a></h4>
                                         <p>
-    <?php echo $curso->presentacion; ?>
+                                            <?php echo $curso->presentacion; ?>
                                         </p>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                                 </div>
                             </div>
                         </div>
-<?php } ?>
+                    <?php } ?>
                 </div>
 
 
@@ -192,13 +192,13 @@ $categorias = $model->Course_model->menuGlobalCategoria();
         <!-- Courses End -->
 
         <!-- Testimonial Start -->
-<?php $this->load->view('template/Testimonial'); ?>
+        <?php $this->load->view('template/Testimonial'); ?>
         <!-- Testimonial End -->
 
         <!-- Partner Start -->
-<?php $this->load->view('template/Partner'); ?>
+        <?php $this->load->view('template/Partner'); ?>
         <!-- Partner End -->
 
         <!-- Footer Start -->
-<?php $this->load->view('template/Footer'); ?>
+        <?php $this->load->view('template/Footer'); ?>
         <!-- Footer End -->
