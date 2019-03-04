@@ -26,7 +26,7 @@ class GestorSlideModel extends CI_Model {
     #---------------------------------------------------------
 
     public function todosSlideModel() {
-
+        $this->db->order_by("orden", "ASC");
         $query = $this->db->get('slide');
 
         if ($query->num_rows() > 0) {
@@ -34,6 +34,24 @@ class GestorSlideModel extends CI_Model {
         } else {
             return false;
         }
+    }
+
+    #ELIMINAR ITEM DEL SLIDE
+    #-----------------------------------------------------------
+
+    public function eliminarSlideModel($id) {
+
+        $this->db->where('id', $id);
+        return $this->db->delete('slide');
+    }
+
+    #ACTUALIZAR ITEM DEL SLIDE
+    #-----------------------------------------------------------
+
+    public function actualizarSlideModel($data) {
+
+        $this->db->where('id', $data['id']);
+        return $this->db->update('slide', $data);
     }
 
 }

@@ -6,6 +6,8 @@
         <title>AdminLTE 2 | Blank Page</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+        <?php $this->load->view('BackEnd/Editor/EditorUrlGlobal'); ?>
         <!-- Bootstrap 3.3.7 -->
         <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/bower_components/bootstrap/dist/css/bootstrap.min.css">
         <!-- Font Awesome -->
@@ -30,7 +32,6 @@
 
         <!-- Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-        <?php $this->load->view('BackEnd/Editor/EditorUrlGlobal'); ?>
 
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
@@ -318,13 +319,13 @@
 
                                     <?php
                                     if ($sliders)
-                                    foreach ($sliders as $slider) {
+                                        foreach ($sliders as $slider) {
 
-                                        echo '<li id="' . $slider->id . '" class="bloqueSlide">'
-                                        . '<span class="fa fa-times eliminarSlide" ruta="' . $slider->ruta . '"></span>'
-                                        . '<img src="' . base_url().$slider->ruta . '" class="handleImg">'
-                                        . '</li>';
-                                    }
+                                            echo '<li id="' . $slider->id . '" class="bloqueSlide">'
+                                            . '<span class="fa fa-times eliminarSlide" ruta="' . $slider->ruta . '"></span>'
+                                            . '<img src="' . base_url() . $slider->ruta . '" class="handleImg">'
+                                            . '</li>';
+                                        }
                                     ?>
 
                                 </ul>
@@ -349,7 +350,7 @@
 
                                             echo '<li id="item' . $slider->id . '">'
                                             . '<span class="fa fa-pencil editarSlide" style="background:blue"></span>'
-                                            . '<img src="' . base_url() .  $slider->ruta . '" style="float:left; margin-bottom:10px" width="80%">'
+                                            . '<img src="' . base_url() . $slider->ruta . '" style="float:left; margin-bottom:10px" width="80%">'
                                             . '<h1>' . $slider->titulo . '</h1>'
                                             . '<p>' . $slider->descripcion . '</p>'
                                             . '</li>';
@@ -388,9 +389,9 @@
         </div>
         <!-- ./wrapper -->
 
-        <!-- jQuery 3 -->
+        <!-- jQuery 3
         <script src="<?= base_url('') ?>public/CPanel/bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
+         Bootstrap 3.3.7 -->
         <script src="<?= base_url('') ?>public/CPanel/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- SlimScroll -->
         <script src="<?= base_url('') ?>public/CPanel/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>

@@ -16,7 +16,7 @@ class GestorSlideController extends CI_Controller {
     #SUBIR LA IMAGEN DEL SLIDE
     #----------------------------------------------------------
 
-    public function subirImagen() {
+    public function subirSlide() {
         #OBJETOS
         #-----------------------------------------------------------
         if (isset($_FILES["imagen"]["name"])) {
@@ -24,10 +24,6 @@ class GestorSlideController extends CI_Controller {
             if ($ancho_img < 1920 || $alto_img < 820) {
                 echo 0;
             } else {
-
-                $imagenTemporal = $_FILES["imagen"]["tmp_name"];
-                $tipo = $_FILES["imagen"]["type"];
-
                 $aleatorio = mt_rand(100, 999);
                 $ruta = "public/images/slider/slide" . $aleatorio . ".jpg";
                 $user_img_profile = "slide" . $aleatorio . ".jpg";
@@ -75,6 +71,48 @@ class GestorSlideController extends CI_Controller {
         } else {
             echo 0;
         }
+    }
+
+    #ELIMINAR ITEM DEL SLIDE
+    #-----------------------------------------------------------
+
+    public function eliminarSlide() {
+
+        $id = $_POST['idSlide'];
+        $ruta = $_POST['rutaSlide'];
+
+        $this->load->helper("file");
+        //if(delete_files(base_url(). $ruta))
+        if (unlink($ruta))
+            $delete = $this->GestorSlideModel->eliminarSlideModel($id);
+        redirect(base_url() . 'backend/editor/slider');
+    }
+
+    #ACTUALIZAR ITEM DEL SLIDE
+    #-----------------------------------------------------------
+
+    public function actualizarSlide() {
+
+        $datos = array(
+            "id" => $_POST['enviarId'],
+            "titulo" => $_POST["enviarTitulo"],
+            "descripcion" => $_POST["enviarDescripcion"]);
+
+        $this->GestorSlideModel->actualizarSlideModel($datos);
+        echo json_encode($datos);
+    }
+    
+    #ACTUALIZAR ITEM DEL SLIDE
+    #-----------------------------------------------------------
+
+    public function ordenarSlide() {
+
+        $datos = array(
+            "orden" => $_POST['actualizarOrdenItem'],
+            "id" => $_POST["actualizarOrdenSlide"]);
+
+        $this->GestorSlideModel->actualizarSlideModel($datos);
+        
     }
 
 }
