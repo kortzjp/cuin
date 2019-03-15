@@ -112,7 +112,7 @@ $imagen = $curso[0]->imagen;
                                             </li>
 
                                             <li>
-                                                <span>Categoria :</span> <?=$curso[0] -> carrera; ?>
+                                                <span>Categoria :</span> <?=$curso[0] -> categoria; ?>
                                             </li>
                                         </ul>
                                     </div>
@@ -235,7 +235,7 @@ $imagen = $curso[0]->imagen;
                     </div>
                     -->
                     <div class="latest-courses">
-                        <h3 class="title">Ultimos cursos</h3>
+                        <h3 class="title">Mas carreras</h3>
                         <?php foreach ($ultimas as $curso){?>
                         <div class="post-item">
                             <div class="post-img">
@@ -267,6 +267,8 @@ $imagen = $curso[0]->imagen;
             </div>
         </div>
     </div>
+    <?php
+    if ($opiniones){?>
     <div id="rs-testimonial" class="rs-testimonial pt-100 pb-45 sec-color">
         <div class="container">
             <div class="sec-title-2 mb-50">
@@ -281,7 +283,7 @@ $imagen = $curso[0]->imagen;
                         <?php foreach ($opiniones as $opinion){?>
                         <div class="testimonial-item">
                             <div class="testi-img">
-                                <img src="<?php echo base_url("public/images/courses/$curso->imagen");?>" alt="">
+                                <img src="<?php echo base_url("public/images/courses/opiniones/$curso->imagen");?>" alt="">
                             </div>
                             <div class="testi-desc">
                                 <h4 class="testi-name"><?php echo $opinion->nombre;?></h4>
@@ -320,6 +322,7 @@ $imagen = $curso[0]->imagen;
 
         </div>
     </div>
+    <?php }?>
     <div class="container pt-100">
         <!-- Testimonial Start -->
         <div class="related-courses rs-courses-3">
