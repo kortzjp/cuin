@@ -68,14 +68,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php  $this->load->view('template/CounterUpSection'); ?> 
         <!-- Counter Down Section End -->
         
+        <!-- Events Start -->
+        <?php  //$this->load->view('template/Events'); ?> 
+        <!-- Events End -->
+        
         <!-- Gallery Start -->
         <?php $this->load->view('template/GalleryGlobal'); ?> 
         <!-- Gallery End -->
-        
-        <!-- Events Start -->
-        <?php // $this->load->view('template/EventsSection'); ?> 
-        <!-- Events End -->
-
+                
         <!-- Team Start -->
         <?php // $this->load->view('template/TeamSection'); ?> 
         <!-- Team End -->
@@ -122,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         -->
 
         <!-- Testimonial Start -->
-        <?php  $this->load->view('template/Testimonial'); ?> 
+        <?php  //$this->load->view('template/Testimonial'); ?> 
         <!-- Testimonial End -->
 
         <!-- Partner Start -->
