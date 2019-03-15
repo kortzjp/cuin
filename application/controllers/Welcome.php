@@ -6,12 +6,14 @@ class Welcome extends CI_Controller {
     {
         parent::__construct();
         $this->load->model("Editor/GestorSlideModel");
+        $this->load->model("Editor/GestorGaleriaModel");
 
     }
 
     public function index()
     {
         $datos['sliders'] = $this->GestorSlideModel->todosSlideModel();
+        $datos['imagenes'] = $this->GestorGaleriaModel->todosGaleriaModel();
         $this->load->view('HomeView',$datos);
     }
 }

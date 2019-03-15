@@ -50,6 +50,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';	
-$route['EditorAjax/GestorSlideController'] = "BackEnd/EditorAjax/GestorSlideController/subirImagen";
+$route['EditorAjax/GestorSlideController/subirSlide'] = "BackEnd/EditorAjax/GestorSlideController/subirSlide";
+$route['EditorAjax/GestorSlideController/eliminarSlide'] = "BackEnd/EditorAjax/GestorSlideController/eliminarSlide";
+$route['EditorAjax/GestorSlideController/actualizarSlide'] ="BackEnd/EditorAjax/GestorSlideController/actualizarSlide";
+$route['EditorAjax/GestorSlideController/ordenarSlide'] ="BackEnd/EditorAjax/GestorSlideController/ordenarSlide";
+$route['EditorAjax/GestorGaleriaController/subirImagen'] ="BackEnd/EditorAjax/GestorGaleriaController/subirImagen";
+$route['EditorAjax/GestorGaleriaController/eliminarImagen'] ="BackEnd/EditorAjax/GestorGaleriaController/eliminarImagen";
+$route['EditorAjax/GestorGaleriaController/ordenarImagen'] ="BackEnd/EditorAjax/GestorGaleriaController/ordenarImagen";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

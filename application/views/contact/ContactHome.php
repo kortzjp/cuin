@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="row rs-vertical-middle">
                             <div class="col-lg-3 col-md-12">
                                 <div class="logo-area">
-                                    <a href="index.html"><img src="<?= base_url()?>public/images/logo-white.png" alt="logo"></a>
+                                    <a href="<?= base_url()?>"><img src="<?= base_url()?>public/images/logo-white.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-12">
@@ -133,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="contact-info contact-address">
                             <i class="fa fa-map-marker"></i>
                             <h4>Dirección</h4>
-                            <p>Calle Nicolas Bravo Esq. Callejon Juan Aldama</p>
+                            <p>Calle Nicolás Bravo Esq. Callejón Juan Aldama</p>
                             <p>Frente a Coopel Centro, Atlacomulco, México.</p>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <label>Correo electónico*</label>
+                                        <label>Correo electrónico*</label>
                                         <input name="email" id="email" class="form-control" type="email">
                                     </div>
                                 </div>

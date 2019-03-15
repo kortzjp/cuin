@@ -1,122 +1,39 @@
-<!-- Gallery Start -->
-<div id="rs-galeria" class="rs-gallery-4 rs-gallery sec-spacer">
+<!-- Courses Start -->
+<div id="rs-galeria" class="rs-courses sec-color sec-spacer">
     <div class="container">
-        <div class="sec-title-2 mb-50 text-center">
-            <h2>GALERIA</h2>      
-            <p>Considering primary motivation for the generation of narratives is a useful concept</p>
+        <div class="sec-title mb-50 text-center">
+            <h2  >GALERÍA</h2>
+            <!-- <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p> -->
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/1.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/1.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/2.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/2.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/3.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/3.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/4.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/4.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
+        <?php if ($imagenes) { 
+            $items = count($imagenes);
+            ?>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="<?= $items ?>" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
+                        <?php
+                        $n = 1;
+                        foreach ($imagenes as $imagen) {
+                            ?>
+                            <div class="cource-item">
+                                <div class="gallery-item">
+                                    <div class="gallery-desc">
+                                        <!-- <h3><a href="#">Photo Title Here</a></h3>
+                                         <p>There are many variations of Lorem Ipsum available</p> -->
+                                        <a class="image-popup" href="<?= $imagen->ruta ?>" title="">
+                                            <img src="<?= $imagen->ruta ?>" alt="Gallery Image" />
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/5.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/5.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/6.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/6.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/5.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/5.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="gallery-item">
-                    <img src="<?= base_url() ?>public/images/gallery/1.png" alt="Gallery Image" />
-                    <div class="gallery-desc">
-                        <h3><a href="#">Photo Title Here</a></h3>
-                        <p>There are many variations of Lorem Ipsum available</p>
-                        <a class="image-popup" href="<?= base_url() ?>public/images/gallery/1.png" title="Photo Title Here">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
-                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
-            </ul>
-        </nav> -->
     </div>
 </div>
-<!-- Gallery End -->
+<!-- Courses End -->

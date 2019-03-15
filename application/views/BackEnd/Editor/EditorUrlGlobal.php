@@ -1,3 +1,7 @@
+<!-- jQuery 3 -->
+
+<script src="<?= base_url('public/CPanel/bower_components/jquery/dist/jquery.min.js')?>"></script>
+<script src="<?= base_url('') ?>public/CPanel/editor/js/jquery-2.2.0.min.js"></script>
 <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/editor/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/editor/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?= base_url('') ?>public/CPanel/editor/css/style.css">
@@ -10,7 +14,6 @@
 
 
 
-<script src="<?= base_url('') ?>public/CPanel/editor/js/jquery-2.2.0.min.js"></script>
 <script src="<?= base_url('') ?>public/CPanel/editor/js/bootstrap.min.js"></script>
 <script src="<?= base_url('') ?>public/CPanel/editor/js/jquery.fancybox.js"></script>
 <script src="<?= base_url('') ?>public/CPanel/editor/js/jquery.dataTables.min.js"></script>

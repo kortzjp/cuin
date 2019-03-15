@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 2 | Blank Page</title>
+        <title>CUIN | Editor de página</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -192,7 +192,6 @@
             <!-- =============================================== -->
 
             <?php $this->load->view('BackEnd/Editor/EditorMenuGlobal'); ?>
-
             <!-- =============================================== -->
 
             <!-- Content Wrapper. Contains page content -->
@@ -216,70 +215,45 @@
                     <!-- Default box -->
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Gestion del Slider</h3>
+                            <h3 class="box-title">Gestion de la Galería</h3>
                         </div>
                         <div class="box-body">
 
                             <!--=====================================
-                            SLIDE ADMINISTRABLE
+                            GALERIA ADMINISTRABLE          
                             ======================================-->
 
-                            <div id="imgSlide" >
+                            <div id="galeria">
+                                <p><span class="fa fa-arrow-down"></span>  Arrastra aquí­ tu imagen (Tamaño recomendado: 1024px * 768px, peso permitido: 2Mb)</p>
 
-                                <p><span class="fa fa-arrow-down"></span>
-                                    Arrastra aquí­ tu imagen (tamaño recomendado: 1920px * 820px y peso recomendado: 2MB)
-                                </p>
-
-                                <ul id="columnasSlide">
+                                <ul id="lightbox">
 
                                     <?php
-                                    if ($sliders)
-                                        foreach ($sliders as $slider) {
-
-                                            echo '<li id="' . $slider->id . '" class="bloqueSlide">'
-                                            . '<span class="fa fa-times eliminarSlide" ruta="' . $slider->ruta . '"></span>'
-                                            . '<img src="' . base_url() . $slider->ruta . '" class="handleImg">'
-                                            . '</li>';
+                                    if ($imagenes)
+                                        foreach ($imagenes as $imagen) {
+                                            echo '<li id="' . $imagen->id . '" class="bloqueGaleria">
+					<span class="fa fa-times eliminarFoto" ruta="' . $imagen->ruta . '"></span>
+					<a rel="grupo" href="' . base_url() . $imagen->ruta . '">
+					<img src="' . base_url() . $imagen->ruta . '" class="handleImg" height="99%">
+					</a>
+				</li>';
                                         }
                                     ?>
 
                                 </ul>
-                                <div class="box-footer clearfix">
-                                    <button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Slides</button>
-                                    <button id="guardarSlide" class="btn btn-primary pull-right" style="display:none; margin:10px 30px">Guardar Orden Slides</button>
-                                </div>
+
+                                <button id="ordenarGaleria" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Imágenes</button>
+
+                                <button id="guardarGaleria" class="btn btn-primary pull-right" style="margin:10px 30px; display:none">Guardar Orden Imágenes</button>
 
                             </div>
 
-                            <!--===============================================-->
+                            <!--====  Fin de GALERIA ADMINISTRABLE  ====-->
 
-                            <div id="textoSlide">
-
-                                <hr>
-
-                                <ul id="ordenarTextSlide">
-
-                                    <?php
-                                    if ($sliders)
-                                        foreach ($sliders as $slider) {
-
-                                            echo '<li id="item' . $slider->id . '">'
-                                            . '<span class="fa fa-pencil editarSlide" style="background:blue"></span>'
-                                            . '<img src="' . base_url() . $slider->ruta . '" style="float:left; margin-bottom:10px" width="80%">'
-                                            . '<h1>' . $slider->titulo . '</h1>'
-                                            . '<p>' . $slider->descripcion . '</p>'
-                                            . '</li>';
-                                        }
-                                    ?>
-
-                                </ul>
-                            </div>
-
-                            <!--===============================================-->
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            Footer
+
                         </div>
                         <!-- /.box-footer-->
                     </div>
@@ -319,7 +293,7 @@
 
         <!-- Backend Editor -->
         <script src="<?= base_url('') ?>public/CPanel/editor/js/script.js"></script>
-        <script src="<?= base_url('') ?>public/CPanel/editor/js/gestorSlide.js"></script>
+        <script src="<?= base_url('') ?>public/CPanel/editor/js/gestorGaleria.js"></script>
 
         <script>
             $(document).ready(function () {

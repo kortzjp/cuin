@@ -9,7 +9,7 @@
                         <i class="fa fa-envelope"></i>
                         <h4 class="contact-title">Dirección</h4>
                         <p class="contact-desc">
-                            Calle Nicolas Bravo Esq. Callejon Juan Aldama<br>
+                            Calle Nicolás Bravo Esq. Callejón Juan Aldama<br>
                             Frente a Coopel Centro, Atlacomulco, México.
                         </p>
                     </div>
@@ -87,7 +87,7 @@
                         <li class="active"><a href="<?= base_url()?>"><i class="fa fa-angle-right" aria-hidden="true"></i>Inicio</a></li>
                         <li ><a href="<?= base_url()?>#rs-about"><i class="fa fa-angle-right" aria-hidden="true"></i>Nosotros</a></li>
                         <li><a href="<?= base_url()?>#rs-courses"><i class="fa fa-angle-right" aria-hidden="true"></i>Cursos</a></li>
-                        <li><a href="<?= base_url() ?>"><i class="fa fa-angle-right" aria-hidden="true"></i>Galeria</a></li>
+                        <li><a href="<?= base_url() ?>#rs-galeria"><i class="fa fa-angle-right" aria-hidden="true"></i>Galería</a></li>
                         <li><a href="<?= base_url() ?>contacto"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacto</a></li>
                         <!--
                         <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>

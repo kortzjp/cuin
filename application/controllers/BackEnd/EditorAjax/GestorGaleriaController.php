@@ -6,29 +6,29 @@ if (!defined('BASEPATH'))
 #CLASE Y MÉTODOS
 #-------------------------------------------------------------
 
-class GestorSlideController extends CI_Controller {
+class GestorGaleriaController extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model("Editor/GestorSlideModel");
+        $this->load->model("Editor/GestorGaleriaModel");
     }
 
-    #SUBIR LA IMAGEN DEL SLIDE
+    #SUBIR LA IMAGEN DEL GALERIA
     #----------------------------------------------------------
 
-    public function subirSlide() {
+    public function subirImagen() {
         #OBJETOS
         #-----------------------------------------------------------
         if (isset($_FILES["imagen"]["name"])) {
             list($ancho_img, $alto_img) = getimagesize($_FILES["imagen"]["tmp_name"]);
-            if ($ancho_img < 1920 || $alto_img < 820) {
-                echo 0;
+            if ($ancho_img < 1024 || $alto_img < 768) {
+                echo 1;
             } else {
                 $aleatorio = mt_rand(100, 999);
-                $ruta = "public/images/slider/slide" . $aleatorio . ".jpg";
-                $user_img_profile = "slide" . $aleatorio . ".jpg";
+                $ruta = "public/images/gallery/gallery" . $aleatorio . ".jpg";
+                $user_img_profile = "gallery" . $aleatorio . ".jpg";
 
-                $config['upload_path'] = './public/images/slider/';
+                $config['upload_path'] = './public/images/gallery/';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size'] = '2000000';
                 //$config['quality'] = '90%';
@@ -37,7 +37,7 @@ class GestorSlideController extends CI_Controller {
 
                 // Aquí me refiero a "foto", el nombre que pusimos en FormData
                 if (!$this->upload->do_upload('imagen')) {
-                    echo 0;
+                    echo 2;
                 } else {
 
                     $CI = & get_instance();
@@ -46,11 +46,11 @@ class GestorSlideController extends CI_Controller {
                     $data = $this->upload->data();
                     $config['image_library'] = 'gd2';
                     $config['source_image'] = $data['full_path'];
-                    $config['new_image'] = './public/images/slider/';
+                    $config['new_image'] = './public/images/gallery/';
                     $config['maintain_ratio'] = TRUE;
                     $config['create_thumb'] = FALSE;
-                    $config['width'] = 1920;
-                    $config['height'] = 820;
+                    $config['width'] = 1024;
+                    $config['height'] = 768;
 
                     $CI->image_lib->initialize($config);
 
@@ -62,10 +62,10 @@ class GestorSlideController extends CI_Controller {
                         "titulo" => "",
                         "descripcion" => "");
 
-                    if ($this->GestorSlideModel->subirImagenSlideModel($enviarDatos))
-                        echo json_encode($enviarDatos);
+                    if ($this->GestorGaleriaModel->subirImagenGaleriaModel($enviarDatos))
+                        echo $ruta;
                     else
-                        echo 0;
+                        echo 3;
                 }
             }
         } else {
@@ -73,45 +73,45 @@ class GestorSlideController extends CI_Controller {
         }
     }
 
-    #ELIMINAR ITEM DEL SLIDE
+    #ELIMINAR ITEM DEL GALERIA
     #-----------------------------------------------------------
 
-    public function eliminarSlide() {
+    public function eliminarImagen() {
 
-        $id = $_POST['idSlide'];
-        $ruta = $_POST['rutaSlide'];
+        $id = $_POST['idGaleria'];
+        $ruta = $_POST['rutaGaleria'];
 
         $this->load->helper("file");
         //if(delete_files(base_url(). $ruta))
         if (unlink($ruta))
-            $delete = $this->GestorSlideModel->eliminarSlideModel($id);
-        redirect(base_url() . 'backend/editor/slider');
+            $delete = $this->GestorGaleriaModel->eliminarImagenGaleriaModel($id);
+        redirect(base_url() . 'backend/editor/gallery');
     }
 
-    #ACTUALIZAR ITEM DEL SLIDE
+    #ACTUALIZAR ITEM DEL GALERIA
     #-----------------------------------------------------------
 
-    public function actualizarSlide() {
+    public function actualizarGaleria() {
 
         $datos = array(
             "id" => $_POST['enviarId'],
             "titulo" => $_POST["enviarTitulo"],
             "descripcion" => $_POST["enviarDescripcion"]);
 
-        $this->GestorSlideModel->actualizarSlideModel($datos);
+        $this->GestorGaleriaModel->actualizarGaleriaModel($datos);
         echo json_encode($datos);
     }
     
-    #ACTUALIZAR ITEM DEL SLIDE
+    #ACTUALIZAR ITEM DEL GALERIA
     #-----------------------------------------------------------
 
-    public function ordenarSlide() {
+    public function ordenarImagen() {
 
         $datos = array(
             "orden" => $_POST['actualizarOrdenItem'],
-            "id" => $_POST["actualizarOrdenSlide"]);
+            "id" => $_POST["actualizarOrdenGaleria"]);
 
-        $this->GestorSlideModel->actualizarSlideModel($datos);
+        $this->GestorGaleriaModel->actualizarGaleriaModel($datos);
         
     }
 

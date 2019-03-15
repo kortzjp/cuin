@@ -151,7 +151,7 @@ $categorias = $model->Course_model->menuGlobalCategoria();
                             End Icons -->
 
                             <!--blog Menu Start -->
-                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-galeria">Galeria</a>
+                            <li class="menu-item-has-children"> <a href="<?= base_url() ?>#rs-galeria">Galería</a>
                                 <!--
                                 <ul class="sub-menu">
                                     <li><a href="blog.html">Blog</a></li>
